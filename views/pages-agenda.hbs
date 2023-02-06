@@ -1,0 +1,33 @@
+    {{> header}}
+    {{> aside}}
+
+  <main id="main" class="main">
+    <div class="d-flex justify-content-between">
+      <h3>Agenda</h3>
+      <a class="btn btn-primary" href="setAgenda" rel="noopener noreferrer"><i class="bi bi-pencil-square"></i> Agendar</a>
+    </div>
+    <hr>
+    <table class="datatable">
+  <thead>
+    <tr class="bg-primary" style="color: white;">
+      <th>Fecha</th>
+      <th>Hora</th>
+      <th>Cliente</th>
+      <th>Empleado</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody style="background: white;">
+    {{#each agendas}}
+    <tr>
+      <td>{{fecha}}</td>
+      <td>{{hora}}</td>
+      <td>{{cliente}}</td>
+      <td>{{empleado}}</td>
+      <td>{{estado}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+  </main><!-- End #main -->

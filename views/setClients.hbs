@@ -1,0 +1,70 @@
+    {{> header}}
+    {{> aside}}
+
+  <main id="main" class="main">
+
+<div class="card">
+  <div class="card-header">
+    <h4>Ingresar un nuevo cliente</h4>
+  </div>
+  <div class="card-body">
+    <form action="/auth/clients" method="post" >
+      <div class="form-group row m-3">
+        <div class="col-sm-6">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+        <div class="col-sm-6">
+          <label for="apellido">Apellido</label>
+          <input type="text" class="form-control" id="apellido" name="apellido" required>
+        </div>
+      </div>
+      <div class="form-group row m-3">
+        <div class="col-sm-6">
+          <label for="dni">DNI</label>
+          <input type="number" class="form-control" id="dni" name="dni" required>
+        </div>
+        <div class="col-sm-6">
+          <label for="cuil">CUIL</label>
+          <input type="number" class="form-control" id="cuil" name="cuil" required>
+        </div>
+      </div>
+      <div class="form-group row m-3">
+        <div class="col-sm-6">
+          <label for="nacimiento">Fecha de Nacimiento</label>
+          <input type="date" class="form-control" id="nacimiento" name="nacimiento" required>
+        </div>
+        <div class="col-sm-6">
+          <label for="telefono">Celular</label>
+          <input type="number" class="form-control" id="telefono" name="telefono" required>
+        </div>
+      </div>
+      <div class="form-group row m-3">
+        <div class="col-sm-6">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="col-sm-6">
+          <label for="domicilio">Domicilio</label>
+          <input type="text" class="form-control" id="domicilio" name="domicilio" required>
+        </div>
+      </div>
+      <div class="form-group row m-3">
+        <div class="col-sm-6">
+          <label for="ciudad">Ciudad</label>
+          <input type="text" class="form-control" id="ciudad" name="ciudad" required>
+        </div>
+        <div class="col-sm-6">
+          <label for="pais">País</label>
+          <input type="text" class="form-control" id="pais" name="pais" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary m-3">Enviar</button>
+    </form>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </main><!-- End #main -->

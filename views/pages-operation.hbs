@@ -1,0 +1,43 @@
+    {{> header}}
+    {{> aside}}
+
+  <main id="main" class="main">
+    <div class="d-flex justify-content-between">
+      <h3>Operaciones</h3>
+      <a class="btn btn-primary" href="setOperation" rel="noopener noreferrer">
+        <i class="bi bi-receipt"></i> Registrar
+        </a>
+    </div>
+    <hr>
+    <table class="datatable">
+  <thead>
+    <tr class="bg-primary" style="color: white;">
+      <th>Empleado</th>
+      <th>Cliente</th>
+      <th>Servicio</th>
+      <th>Observación</th>
+      <th>Fecha</th>
+      <th>Hora</th>
+      <th>Estado</th>
+      <th>Bruto</th>
+      <th>Ganancia</th>
+    </tr>
+  </thead>
+  <tbody style="background: white;">
+  {{#each operations}}
+    <tr>
+      <td>{{empleado}}</td>
+      <td>{{cliente}}</td>
+      <td>{{servicio}}</td>
+      <td>{{observacion}}</td>
+      <td>{{fecha}}</td>
+      <td>{{hora}}</td>
+      <td>{{estado}}</td>
+      <td>{{valorBruto}}</td>
+      <td>{{valorNeto}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+  </main><!-- End #main -->

@@ -1,0 +1,198 @@
+
+  {{> header}}
+  {{> aside}}
+        <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Bienvenido/a, {{usuario.nombre}} {{usuario.apellido}}</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index">Home</a></li>
+          <li class="breadcrumb-item active">Tablero</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- columns -->
+        <div class="col-lg-8">
+          <div class="row">
+
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Cantidad de operaciones</h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-graph-up"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h5><b>{{opCount}}</b></h5>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue2-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Citas agendadas</h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-pen"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h5><b>{{agenCount}}</b></h5>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+                  
+            <div class="col-xxl-4 col-xl-12">
+
+              <div class="card info-card customers-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Clientes totales</h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h5><b>{{cltsCount}}</b></h5>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Servicios</h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-journal-bookmark-fill"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h5><b>{{servCount}}</b></h5>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Tu equipo</h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-building"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h5><b>{{usCount}}</b></h5>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+
+
+        <div class="col-lg-4">
+
+          <div class="card">
+
+            <div class="card-body pb-0">
+              <h5 class="card-title">Trafico del sitio</h5>
+
+              <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  echarts.init(document.querySelector("#trafficChart")).setOption({
+                    tooltip: {
+                      trigger: 'item'
+                    },
+                    legend: {
+                      top: '5%',
+                      left: 'center'
+                    },
+                    series: [{
+                      name: 'Access From',
+                      type: 'pie',
+                      radius: ['40%', '70%'],
+                      avoidLabelOverlap: false,
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: '18',
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [
+                        {
+                          value: {{agenCount}},
+                          name: 'Agenda'
+                        },
+                        {
+                          value: {{cltsCount}},
+                          name: 'Clientes'
+                        },
+                        {
+                          value: {{opCount}},
+                          name: 'Operaciones'
+                        },
+                        {
+                          value: {{servCount}},
+                          name: 'Servicios'
+                        },
+                        {
+                          value: {{usCount}},
+                          name: 'Nomina'
+                        }
+                      ]
+                    }]
+                  });
+                });
+              </script>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+  

@@ -1,0 +1,47 @@
+    {{> header}}
+    {{> aside}}
+
+  <main id="main" class="main">
+    <div class="d-flex justify-content-between">
+      <h3>Clientes</h3>
+      <a class="btn btn-primary" href="setClients" rel="noopener noreferrer">
+        <i class="bi bi-person-plus"></i> Nuevo
+        </a>
+    </div>
+    <hr>
+    <table class="datatable">
+  <thead>
+    <tr class="bg-primary" style="color: white;">
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>DNI</th>
+      <th>CUIL</th>
+      <th>Nacimiento</th>
+      <th>Teléfono</th>
+      <th>Email</th>
+      <th>Domicilio</th>
+      <th>Ciudad</th>
+      <th>País</th>
+      <th>Responsable</th>
+    </tr>
+  </thead>
+  <tbody style="background: white;">
+        {{#each clients}}
+    <tr>
+      <td>{{nombre}}</td>
+      <td>{{apellido}}</td>
+      <td>{{dni}}</td>
+      <td>{{cuil}}</td>
+      <td>{{nacimiento}}</td>
+      <td>{{telefono}}</td>
+      <td>{{email}}</td>
+      <td>{{domicilio}}</td>
+      <td>{{ciudad}}</td>
+      <td>{{pais}}</td>
+      <td>{{carga}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+  </main><!-- End #main -->

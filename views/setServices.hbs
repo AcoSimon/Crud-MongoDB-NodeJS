@@ -1,0 +1,40 @@
+    {{> header}}
+    {{> aside}}
+
+  <main id="main" class="main">
+<div class="card">
+  <div class="card-header">
+    <h4>Añade un nuevo servicio:</h4>
+  </div>
+ <div class="card-body">
+  <form action="/auth/services" method="post" >
+    <div class="form-group row m-3">
+      <div class="col-sm-12">
+        <label for="nombre">Nombre del servicio</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+      </div>
+      <div class="col-sm-12">
+        <label for="descripcion">Descripción</label>
+        <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
+      </div>
+    </div>
+    <div class="form-group row m-3">
+      <div class="col-sm-4">
+        <label for="comision">Comisión</label>
+        <input type="number" class="form-control" id="comision" name="comision" required>
+      </div>
+      <div class="col-sm-4">
+        <label for="especial">Especial</label>
+        <input type="number" class="form-control" id="especial" name="especial" required>
+      </div>
+      <div class="col-sm-4">
+        <label for="costo">Costo</label>
+        <input type="number" class="form-control" id="costo" name="costo" required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary m-3">Enviar</button>
+  </form>
+</div>
+
+
+  </main><!-- End #main -->

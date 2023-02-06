@@ -1,0 +1,41 @@
+    {{> header}}
+    {{> aside}}
+
+  <main id="main" class="main">
+
+<div class="card">
+  <div class="card-header">
+    <h4>Agendar reunion</h4>
+  </div>
+  <div class="card-body">
+    <form action="/auth/agenda" method="post" >
+      <div class="form-group m-3">
+        <label for="empleado">Empleado</label>
+        <input type="text" class="form-control" id="empleado" placeholder="{{usuario.nombre}} {{usuario.apellido}}" name="empleado" disabled>
+      </div>
+      <div class="form-group m-3">
+        <label for="cliente">Cliente</label>
+        <input type="text" class="form-control" id="cliente" name="cliente" required>
+      </div>
+      <div class="form-group m-3">
+        <label for="fecha">Fecha</label>
+        <input type="date" class="form-control" id="fecha" name="fecha" required>
+      </div>
+      <div class="form-group m-3">
+        <label for="hora">Hora</label>
+        <input type="time" class="form-control" id="hora" name="hora" required>
+      </div>
+      <div class="form-group m-3">
+        <label for="estado">Estado</label>
+        <select class="form-control" id="estado" name="estado" required>
+          <option value="true">Prioridad</option>
+          <option value="false">Normal</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary m-3">Enviar</button>
+    </form>
+  </div>
+</div>
+
+
+  </main><!-- End #main -->

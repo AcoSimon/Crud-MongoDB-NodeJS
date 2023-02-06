@@ -1,0 +1,10 @@
+PORT = 8080
+MONGOLOCAL = 'mongodb.http://localhost:8080/test'
+mongoAtlasInit = 'mongodb+srv://USUARIO:PASS@urlIMAGINARIA.9c9nptn.mongodb.net/'
+mongoAtlasEntidad='EducacionIT'
+mongoAtlasEnd = '?retryWrites=true&w=majority'
+secret = "secret"
+MONGOATLAS = 'mongodb+srv://USUARIO:PASS@urlIMAGINARIA.9c9nptn.mongodb.net/test?retryWrites=true&w=majority'
+
+
+//(REEMPLAZAR todo por tu uriAtlas, las cargadas son de ejemplo, faltan usuario y pass. USUARIO:PASS@urlIMAGINARIA.)

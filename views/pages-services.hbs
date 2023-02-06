@@ -1,0 +1,35 @@
+    {{> header}}
+    {{> aside}}
+
+  <main id="main" class="main">
+    <div class="d-flex justify-content-between">
+      <h3>Servicios</h3>
+      <a class="btn btn-primary" href="setServices" rel="noopener noreferrer">
+        <i class="bi bi-journal-bookmark"></i> Añadir
+        </a>
+    </div>
+    <hr>
+    <table class="datatable">
+  <thead>
+    <tr class="bg-primary" style="color: white;">
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Comisión</th>
+      <th>Especial</th>
+      <th>Costo</th>
+    </tr>
+  </thead>
+  <tbody style="background: white;">
+     {{#each services}}
+    <tr>
+      <td>{{nombre}}</td>
+      <td>{{descripcion}}</td>
+      <td>{{comision}}</td>
+      <td>{{especial}}</td>
+      <td>{{costo}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+  </main><!-- End #main -->
